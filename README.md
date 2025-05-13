@@ -2,7 +2,7 @@
 
 
 <div style="text-align:center">
-  <img src="./assets/workflow.png" width="600" alt="ReMindRAG Overall Workflow">
+  <img src="./assets/workflow.png" style="width:100%;" alt="ReMindRAG Overall Workflow">
 </div>
 
 ### ​​ReMindRAG (Retrieve and Memorize)​​ enhances RAG systems by leveraging LLM-guided knowledge graph traversal for efficient, fine-grained retrieval. 
