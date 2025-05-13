@@ -143,7 +143,7 @@ Answer:
 
     print(f"{title_index} Handle question")
 
-    raw_response, chunks, edges = rag.generate_response(chat_history=[], user_input=query, do_update=False, force_do_rag=True, max_jumps=2)
+    raw_response, chunks, edges = rag.generate_response(chat_history=[], user_input=query, do_update=False, force_do_rag=True, max_jumps=10)
     response = response_format.format(query = query, output = raw_response, chunks = str(chunks), edges = str(edges))
 
     ans_rewrite_input = ans_rewrite_prompt.format(question = query, og_output= response)
