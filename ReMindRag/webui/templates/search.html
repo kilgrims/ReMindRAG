@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Search - ReMindRAG Web UI</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-bg: #f5f7fa;
+            --dark-bg: #34495e;
+            --text-color: #2c3e50;
+            --light-text: #ecf0f1;
+            --border-color: #ddd;
+            --success-color: #2ecc71;
+            --warning-color: #f39c12;
+            --error-color: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .form-group {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 150px;
+            font-family: monospace;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary {
+            background-color: #7f8c8d;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #636e72;
+        }
+        
+        .btn-submit {
+            align-self: flex-start;
+        }
+        
+        .nav-links {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        #results-container {
+            display: none;
+            margin-top: 2rem;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background-color: white;
+        }
+        
+        .results-table th, .results-table td {
+            border: 1px solid var(--border-color);
+            padding: 0.8rem;
+            text-align: left;
+        }
+        
+        .results-table th {
+            background-color: var(--light-bg);
+            font-weight: 600;
+        }
+        
+        .results-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .results-table tr:hover {
+            background-color: #e3f2fd;
+        }
+        
+        .metadata-cell, .embedding-cell {
+            max-width: 200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .document-cell {
+            max-width: 400px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .expandable {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .expandable:hover::after {
+            content: '点击展开';
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            background: var(--dark-bg);
+            color: var(--light-text);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 10;
+        }
+        
+        .expanded {
+            white-space: pre-wrap;
+            overflow: visible;
+            max-width: none;
+        }
+        
+        .status-indicator {
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .status-success {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+        
+        .status-error {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: var(--error-color);
+            border: 1px solid var(--error-color);
+        }
+        
+        .status-loading {
+            background-color: rgba(243, 156, 18, 0.2);
+            color: var(--warning-color);
+            border: 1px solid var(--warning-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(243, 156, 18, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--warning-color);
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .count-info {
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Advanced Search</h1>
+    </header>
+    
+    <div class="container">
+        <div class="nav-links">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Home</a>
+        </div>
+        
+        <div class="card">
+            <h2>Search Collections</h2>
+            
+            <div id="status-loading" class="status-indicator status-loading">
+                <div class="loading-spinner"></div>
+                <span>Searching...</span>
+            </div>
+            <div id="status-success" class="status-indicator status-success"></div>
+            <div id="status-error" class="status-indicator status-error"></div>
+            
+            <div class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="collection-select">Collection:</label>
+                        <select id="collection-select">
+                            {% for collection_name in collections %}
+                            <option value="{{ collection_name }}">{{ collection_name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="n-results">Results Limit:</label>
+                        <input type="number" id="n-results" value="10" min="1" max="100">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="query-text">Query Text:</label>
+                    <textarea id="query-text" placeholder="Enter your search query"></textarea>
+                </div>
+                
+                <button type="button" id="search-btn" class="btn btn-submit">Search</button>
+            </div>
+            
+            <div id="results-container">
+                <h3>Search Results</h3>
+                <div class="count-info" id="results-count"></div>
+                
+                <div style="overflow-x: auto;">
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Document</th>
+                                <th>Metadata</th>
+                                <th>Embedding (First 5 values)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body">
+                            <!-- Results will be inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchBtn = document.getElementById('search-btn');
+            const collectionSelect = document.getElementById('collection-select');
+            const queryText = document.getElementById('query-text');
+            const nResults = document.getElementById('n-results');
+            const resultsContainer = document.getElementById('results-container');
+            const resultsBody = document.getElementById('results-body');
+            const resultsCount = document.getElementById('results-count');
+            const statusLoading = document.getElementById('status-loading');
+            const statusSuccess = document.getElementById('status-success');
+            const statusError = document.getElementById('status-error');
+            
+            searchBtn.addEventListener('click', function() {
+                const collection = collectionSelect.value;
+                const query = queryText.value.trim();
+                const limit = parseInt(nResults.value);
+                
+                if (!query) {
+                    showStatus('error', 'Please enter a search query.');
+                    return;
+                }
+                
+                // Show loading
+                showStatus('loading');
+                
+                // Prepare the request
+                fetch(`/api/search/${collection}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        query_text: query,
+                        n_results: limit
+                    })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Search request failed');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Clear previous results
+                    resultsBody.innerHTML = '';
+                    
+                    if (data.results && data.results.length > 0) {
+                        // Show results
+                        data.results.forEach(result => {
+                            const row = document.createElement('tr');
+                            
+                            // ID cell
+                            const idCell = document.createElement('td');
+                            idCell.textContent = result.id;
+                            row.appendChild(idCell);
+                            
+                            // Document cell
+                            const docCell = document.createElement('td');
+                            docCell.className = 'document-cell expandable';
+                            docCell.textContent = result.document || 'No document';
+                            docCell.onclick = function() { toggleExpand(this); };
+                            row.appendChild(docCell);
+                            
+                            // Metadata cell
+                            const metaCell = document.createElement('td');
+                            metaCell.className = 'metadata-cell expandable';
+                            metaCell.textContent = JSON.stringify(result.metadata);
+                            metaCell.onclick = function() { toggleExpand(this); };
+                            row.appendChild(metaCell);
+                            
+                            // Embedding cell
+                            const embeddingCell = document.createElement('td');
+                            embeddingCell.className = 'embedding-cell expandable';
+                            
+                            if (result.embedding && result.embedding.length > 0) {
+                                embeddingCell.textContent = `[${result.embedding.slice(0, 5).join(', ')}...]`;
+                            } else {
+                                embeddingCell.textContent = 'No embedding';
+                            }
+                            
+                            embeddingCell.onclick = function() { toggleExpand(this); };
+                            row.appendChild(embeddingCell);
+                            
+                            resultsBody.appendChild(row);
+                        });
+                        
+                        // Update count info
+                        resultsCount.textContent = `Found ${data.results.length} results`;
+                        
+                        // Show results container
+                        resultsContainer.style.display = 'block';
+                        
+                        // Show success status
+                        showStatus('success', `Successfully retrieved ${data.results.length} results.`);
+                    } else {
+                        // No results
+                        resultsCount.textContent = 'No results found';
+                        resultsContainer.style.display = 'block';
+                        showStatus('success', 'No results found for your query.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    showStatus('error', 'An error occurred while searching. Please try again.');
+                });
+            });
+            
+            function showStatus(type, message = '') {
+                // Hide all status indicators first
+                statusLoading.style.display = 'none';
+                statusSuccess.style.display = 'none';
+                statusError.style.display = 'none';
+                
+                // Show the appropriate status
+                if (type === 'loading') {
+                    statusLoading.style.display = 'flex';
+                } else if (type === 'success') {
+                    statusSuccess.textContent = message;
+                    statusSuccess.style.display = 'block';
+                } else if (type === 'error') {
+                    statusError.textContent = message;
+                    statusError.style.display = 'block';
+                }
+                
+                // Auto-hide success and error after 5 seconds
+                if (type === 'success' || type === 'error') {
+                    setTimeout(() => {
+                        document.getElementById(`status-${type}`).style.display = 'none';
+                    }, 5000);
+                }
+            }
+        });
+        
+        function toggleExpand(element) {
+            element.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>

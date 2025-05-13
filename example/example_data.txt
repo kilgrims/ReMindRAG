@@ -1,0 +1,344 @@
+**Paladin**
+
+Her plate armor, covered in the dust of travel, still gleamed under the sunlight. The human lowered her sword and shield, placing both hands upon the severely wounded man. As a radiant glow of divine energy emanated from her palms, the man’s wounds miraculously closed, and he opened his eyes in astonishment at his savior.
+A dark cloak rendered the dwarf nearly invisible in the night. He crouched behind an exposed rock outcropping, watching a band of orcs celebrating a recent victory. Moments later, he rose silently and stepped into their midst. With a whispered divine oath, two orcs collapsed, lifeless, never realizing the dwarf's presence in their final moments.
+His silver hair glistened in a spotlight-like radiance. The elf laughed with unrestrained joy as he repeatedly drove his gleaming spear—bright as his eyes—into the twisted body of a giant, until his holy light completely consumed the lingering foul darkness.
+Paladins of many different backgrounds and missions are united in their drive to oppose evil, each guided by a sacred oath. Some swear their oaths before altars with priests as witnesses, others in forest sanctuaries to the spirits of nature, and still others at the brink of despair and catastrophe, with only the dead as their witnesses. Regardless of where it is made, a paladin's oath is a powerful bond. It is this sacred commitment that transforms a devout warrior into a blessed champion.
+
+### **The Cause of Righteousness**
+
+Paladins swear to uphold justice and righteousness, to stand with all good things in the world against the creeping tide of darkness, and to hunt down all evils lurking in the shadows. Each paladin focuses on a different aspect of this righteous cause, drawing power from the solemn oath they swore. While many paladins devote themselves to benevolent deities, their unwavering dedication to justice itself grants them immense power—sometimes equal to that bestowed by the gods.
+Paladins spend years honing their martial skills and mastering the use of weapons and armor. Even so, their prowess in battle is second only to their ability to wield divine magic. They use this magic to heal the wounded, smite evil, and protect the innocent and all allies who fight for righteousness.
+
+### **Beyond the Mundane Life**
+
+The very existence of a paladin demands a life of adventure. Such a life continues until they are too wounded to carry on—for they always find themselves at the front lines of the eternal war between good and evil. In the mundane world, true paladins are far rarer than trained soldiers or militia. Those who are called to this path often abandon their former identities and positions without hesitation to join the battle against evil.
+Sometimes, their oath leads them to become elite commanders or champions serving a kingdom. Yet even in these roles, their loyalty to king and country is always second to their devotion to the cause of righteousness.
+
+### **Paladin Class Table**
+
+| Level | Proficiency Bonus | Class Features                             | 1st | 2nd | 3rd | 4th | 5th |
+| ----- | ----------------- | ------------------------------------------ | --- | --- | --- | --- | --- |
+| 1st   | +2                | Divine Sense, Lay on Hands                 | —   | —   | —   | —   | —   |
+| 2nd   | +2                | Divine Smite, Fighting Style, Spellcasting | 2   | —   | —   | —   | —   |
+| 3rd   | +2                | Divine Health, Sacred Oath                 | 3   | —   | —   | —   | —   |
+| 4th   | +2                | Ability Score Improvement                  | 3   | —   | —   | —   | —   |
+| 5th   | +3                | Extra Attack                               | 4   | 2   | —   | —   | —   |
+| 6th   | +3                | Aura of Protection                         | 4   | 2   | —   | —   | —   |
+| 7th   | +3                | Sacred Oath Feature                        | 4   | 3   | —   | —   | —   |
+| 8th   | +3                | Ability Score Improvement                  | 4   | 3   | —   | —   | —   |
+| 9th   | +4                | —                                          | 4   | 3   | 2   | —   | —   |
+| 10th  | +4                | Aura of Courage                            | 4   | 3   | 2   | —   | —   |
+| 11th  | +4                | Improved Divine Smite                      | 4   | 3   | 3   | —   | —   |
+| 12th  | +4                | Ability Score Improvement                  | 4   | 3   | 3   | —   | —   |
+| 13th  | +5                | —                                          | 4   | 3   | 3   | 1   | —   |
+| 14th  | +5                | Cleansing Touch                            | 4   | 3   | 3   | 1   | —   |
+| 15th  | +5                | Sacred Oath Feature                        | 4   | 3   | 3   | 2   | —   |
+| 16th  | +5                | Ability Score Improvement                  | 4   | 3   | 3   | 2   | —   |
+| 17th  | +6                | —                                          | 4   | 3   | 3   | 3   | 1   |
+| 18th  | +6                | Aura Improvements                          | 4   | 3   | 3   | 3   | 1   |
+| 19th  | +6                | Ability Score Improvement                  | 4   | 3   | 3   | 3   | 2   |
+| 20th  | +6                | Sacred Oath Feature                        | 4   | 3   | 3   | 3   | 2   |
+
+
+### **Paladins in Adventure**
+
+Paladins take their duties with utmost seriousness. When searching ancient ruins or exploring long-sealed dungeons, a paladin is more often driven by a noble purpose than by the lure of treasure. Evil lurks within the depths of dungeons and the heart of primeval forests, and even the smallest victory against it helps shift the balance of the universe toward order rather than complete annihilation.
+
+
+### **Creating a Paladin**
+
+One of the most important aspects of your paladin character is the nature of their sacred mission. While you won’t gain your Sacred Oath features until 3rd level, you should read ahead and choose one early on, as it will shape your character's development.
+Do you serve a god of honor and justice, becoming a shining knight clad in sanctified armor to smite evil? Are you a champion of light, cherishing beauty and goodness in the world, standing as the heir to an oath older than many deities? Or are you a tormented loner, driven by vengeance against great evil, acting as an angel of death empowered by the gods—or by your own relentless will?
+Appendix B lists many deities across the multiverse that are revered by paladins, including Torm, Tyr, Heironeous, Paladine, Kiri-Jolith, Dol Arrah, the Silver Flame, Bahamut, Athena, Re-Horakhty, and Heimdall.
+How did your calling come to you? Did you hear a whisper from an unseen god or angel during prayer? Did another paladin see your potential and take you as a squire? Were you driven by tragedy, such as the destruction of your home? Perhaps you stumbled into a sacred grove or hidden elven sanctuary and felt a divine urge to protect all that is good. Or maybe you've known your entire life that this is your destiny, as if the path of a paladin was etched into your soul before you were even born.
+As a protector against the forces of corruption, a paladin is almost never evil. Most follow a path of compassion and justice. Consider how your alignment affects how you fulfill your holy mission, and how it governs your code of conduct before both gods and mortals. Your oath and alignment might be in harmony—or your oath may represent an ideal you have not yet achieved.
+
+
+### **Quick Build**
+
+You can make a paladin quickly by following these suggestions. First, make Strength your highest ability score, followed by Charisma. Second, choose the noble background.
+
+
+### **Class Features**
+
+As a paladin, you gain the following class features.
+
+### **Hit Points**
+
+* **Hit Dice:** 1d10 per paladin level
+* **Hit Points at 1st Level:** 10 + your Constitution modifier
+* **Hit Points at Higher Levels:** 1d10 (or 6) + your Constitution modifier per paladin level after 1st
+
+
+### **Proficiencies**
+
+* **Armor:** All armor, shields
+* **Weapons:** Simple weapons, martial weapons
+* **Tools:** None
+* **Saving Throws:** Wisdom, Charisma
+* **Skills:** Choose two from Athletics, Insight, Intimidation, Medicine, Persuasion, and Religion
+
+
+### **Equipment**
+
+You start with the following equipment, in addition to the equipment granted by your background:
+* *(a)* a martial weapon and a shield or *(b)* two martial weapons
+* *(a)* five javelins or *(b)* any simple melee weapon
+* *(a)* a priest’s pack or *(b)* an explorer’s pack
+* Chain mail and a holy symbol
+
+
+### **Divine Sense**
+
+The presence of strong evil registers on your senses like a noxious odor, and powerful good rings like heavenly music in your ears. As an action, you can open your awareness to detect such forces. Until the end of your next turn, you know the location of any celestial, fiend, or undead within 60 feet of you that is not behind total cover. You know the type (celestial, fiend, or undead) of any being whose presence you sense, but not its identity (e.g., *Count Strahd von Zarovich*).
+Within the same radius, you also detect the presence of any place or object that has been consecrated or desecrated, as with the *hallow* spell.
+You can use this feature a number of times equal to 1 + your Charisma modifier. When you finish a long rest, you regain all expended uses.
+
+### **Lay on Hands**
+
+Your blessed touch can heal wounds. You have a pool of healing power that replenishes when you take a long rest. With that pool, you can restore a total number of hit points equal to your paladin level × 5.
+As an action, you can touch a creature to restore any number of hit points remaining in the pool. Alternatively, you can expend 5 hit points from the pool to cure the target of one disease or neutralize one poison affecting it. You can cure multiple diseases and neutralize multiple poisons with a single use of Lay on Hands, expending hit points separately for each one.
+This feature has no effect on undead and constructs.
+
+
+### Fighting Style
+
+Starting at 2nd level, you choose a fighting style to specialize in. Choose one of the following options. You can't take a Fighting Style option more than once, even if you later get to choose again.
+* **Defense**
+  While you are wearing armor, you gain a +1 bonus to AC.
+* **Dueling**
+  When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+* **Great Weapon Fighting**
+  When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or 2. The weapon must have the *two-handed* or *versatile* property to gain this benefit.
+* **Protection**
+  When a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.
+
+### Spellcasting
+
+Starting at 2nd level, you can cast Paladin spells through divine prayers and meditation, similar to a cleric. Refer to Chapter 10 for the general rules of spellcasting and Chapter 11 for the Paladin spell list.
+
+#### Preparing and Casting Spells
+
+The *Paladin table* shows how many spell slots of 1st level and higher you have. To cast a Paladin spell, you must expend a spell slot of the spell's level or higher. All expended spell slots are recovered after a long rest.
+You can prepare a number of Paladin spells equal to your Charisma modifier + half your Paladin level (minimum of one spell). The spells must be of a level for which you have spell slots.
+For example, when you reach 5th level, you have four 1st-level slots and two 2nd-level slots. With a Charisma score of 14 (+2), you can prepare 4 spells from the Paladin spell list. If *Cure Wounds* is among your prepared spells, you can cast it using either a 1st- or 2nd-level slot. Preparing a spell does not remove it from your list when cast.
+You can change your list of prepared spells when you finish a long rest. Preparing a new list requires time spent in prayer and meditation: at least 1 minute per spell level for each spell on your list.
+
+#### Spellcasting Ability
+
+Charisma is your spellcasting ability for your Paladin spells, as your power comes from your unwavering devotion.
+
+* **Spell Save DC** = 8 + your proficiency bonus + your Charisma modifier
+* **Spell Attack Modifier** = your proficiency bonus + your Charisma modifier
+
+#### Spellcasting Focus
+
+You can use a holy symbol (see Chapter 5) as a spellcasting focus for your Paladin spells.
+
+### Divine Smite
+
+Starting at 2nd level, when you hit a creature with a melee weapon attack, you can expend a spell slot to deal radiant damage in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or fiend, to a maximum of 6d8.
+
+### Divine Health
+
+At 3rd level, the divine magic flowing through you makes you immune to disease.
+
+### Sacred Oath
+
+When you reach 3rd level, you swear the oath that binds you as a Paladin forever. Up until this time, you have been in a preparatory stage, committed to the path but not yet sworn to it. This oath reflects your commitment to justice and your chosen ideals. Choose one Sacred Oath from the following options: **Oath of Devotion**, **Oath of the Ancients**, or **Oath of Vengeance**. Each oath grants you features at 3rd, 7th, 15th, and 20th levels.
+
+#### Oath Spells
+
+Each oath has a list of associated spells, called oath spells. You gain access to these spells at the levels specified in the oath description. Once you gain an oath spell, it is always prepared and doesn't count against your number of prepared spells. Oath spells are considered Paladin spells for you, even if they don’t appear on the Paladin spell list.
+
+#### Channel Divinity
+
+Your oath allows you to channel divine energy to fuel magical effects. Each oath provides options for using this feature. When you use your Channel Divinity, you choose which effect to use. You must then finish a short or long rest to use Channel Divinity again.
+Some effects require saving throws. The save DC equals your Paladin spell save DC.
+
+
+### Ability Score Improvement
+
+When you reach 4th level, and again at 8th, 12th, 16th, and 19th levels, you can increase one ability score by 2, or two ability scores by 1. You can’t increase an ability score above 20 using this feature.
+
+### Extra Attack
+
+Starting at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
+
+### Aura of Protection
+
+Beginning at 6th level, whenever you or a friendly creature within 10 feet of you makes a saving throw, the creature gains a bonus equal to your Charisma modifier (minimum of +1). You must be conscious to grant this bonus.
+At 18th level, the range increases to 30 feet.
+
+### Aura of Courage
+
+Starting at 10th level, you and friendly creatures within 10 feet of you can’t be frightened while you are conscious.
+At 18th level, the range increases to 30 feet.
+
+### Improved Divine Smite
+
+Starting at 11th level, your weapon strikes are suffused with divine energy. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage.
+
+### Cleansing Touch
+
+Beginning at 14th level, you can use your action to end one spell on yourself or on one willing creature that you touch.
+You can use this feature a number of times equal to your Charisma modifier (minimum of once). You regain all expended uses when you finish a long rest.
+
+### Sacred Oaths
+
+To become a Paladin is to swear allegiance to the cause of righteousness and to tread the path of opposing evil. The final version of this oath—taken at 3rd level—summarizes the ideals and training you've undertaken as a Paladin. Some believe you are not truly a Paladin until you’ve sworn this oath; others see it as a formal acknowledgment of your inner conviction.
+
+### Oath of Devotion
+
+The Oath of Devotion embodies ideals of justice, virtue, and order. Paladins who swear this oath are sometimes called **cavaliers**, **white knights**, or **holy warriors**. They often serve deities of law and goodness and wear gleaming armor as beacons of honor. Many are devoted to angelic exemplars and adorn their shields or helms with wings.
+
+#### Tenets of Devotion
+
+Though the exact wording may vary, Paladins of this oath share these principles:
+* **Honesty**: Don’t lie or cheat. Let your word be your promise.
+* **Courage**: Face fear and act justly, even when it’s difficult.
+* **Compassion**: Aid others, protect the weak, show mercy to foes, and inspire redemption.
+* **Honor**: Act with fairness and integrity, be a role model of virtue, and do no unnecessary harm.
+* **Duty**: Be responsible for your actions and those under your protection. Obey those with rightful authority.
+
+
+### **Oath Spells**
+
+You gain the following oath spells.
+
+### **Oath of Devotion Spells**
+
+| Paladin Level | Spells                                       |
+| ------------- | -------------------------------------------- |
+| 3rd           | *protection from evil and good*, *sanctuary* |
+| 5th           | *lesser restoration*, *zone of truth*        |
+| 9th           | *beacon of hope*, *dispel magic*             |
+| 13th          | *freedom of movement*, *guardian of faith*   |
+| 17th          | *commune*, *flame strike*                    |
+
+### **Channel Divinity**
+
+When you take this oath at 3rd level, you gain the following two Channel Divinity options:
+* **Sacred Weapon.** As an action, you can imbue one weapon that you are holding with positive energy, using your Channel Divinity. For 1 minute, you add your Charisma modifier (minimum +1) to attack rolls made with that weapon. The weapon also emits bright light in a 20-foot radius and dim light 20 feet beyond that. If the weapon is not already magical, it becomes magical for the duration.
+  You can end this effect on your turn as part of any other action. If you are no longer holding or carrying this weapon, or if you fall unconscious, the effect ends.
+* **Turn the Unholy.** As an action, you present your holy symbol and speak a prayer, using your Channel Divinity to censure fiends and undead. Each fiend or undead that can see or hear you within 30 feet must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.
+  A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can only use the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can use the Dodge action.
+
+
+### **Breaking Your Oath**
+
+Paladins strive to uphold the highest moral standards, but even the most virtuous can fall. Sometimes the right path is too hard to see; sometimes one must choose the lesser of two evils; and sometimes a paladin’s zeal can lead to misjudgment.
+Paladins who stray typically seek guidance from a cleric of the same faith or another paladin of their order. Acts of contrition may include a nightlong vigil, fasting, or similar rituals. After confession and forgiveness, the paladin regains their purity.
+However, a paladin who willfully and unapologetically breaks their oath may face more serious consequences. At the DM’s discretion, such a character might be required to abandon the paladin class or adopt the *Oathbreaker* paladin option described in the *Dungeon Master’s Guide*.
+
+### **Aura of Devotion**
+
+Starting at 7th level, you and friendly creatures within 10 feet of you can't be charmed while you are conscious.
+At 18th level, the range of this aura increases to 30 feet.
+
+### **Purity of Spirit**
+
+At 15th level, you are always under the effects of *protection from evil and good*.
+
+### **Holy Nimbus**
+
+At 20th level, as an action, you can emanate an aura of sunlight. For 1 minute, bright light shines from you in a 30-foot radius, and dim light shines 30 feet beyond that.
+Any hostile creature that starts its turn in the bright light takes 10 radiant damage.
+In addition, for the duration, you have advantage on saving throws against spells cast by fiends and undead.
+Once you use this feature, you must finish a long rest before you can use it again.
+
+### **Oath of the Ancients**
+
+The Oath of the Ancients is as old as the race of elves and the traditions of the druids. Paladins who swear this oath—known as fey knights, green knights, or horned knights—stand against the encroaching darkness in the eternal struggle of good versus evil. Their armor and clothing are often adorned with leaves, antlers, and floral motifs to reflect their vow to protect life and light.
+
+
+### **Tenets of the Ancients**
+
+The tenets of the Oath of the Ancients have been passed down for countless generations. They emphasize kindness and goodness over law and order. The oath includes four core principles:
+* **Kindle the Light.** Through acts of mercy, kindness, and forgiveness, kindle the light of hope in the world and beat back despair.
+* **Shelter the Light.** Where there is good, beauty, love, and laughter in the world, stand against the forces that would rend it asunder.
+* **Preserve Your Own Light.** Delight in song and laughter, in beauty and art. If you allow the light to die in your own heart, you can't preserve it in the world.
+* **Be the Light.** Be a shining beacon for others to follow, radiating hope and courage through your very presence.
+
+### Oath of the Ancients
+
+#### Oath Spells
+You gain the following oath spells at the specified paladin levels.
+
+| Paladin Level | Spells                                   |
+|---------------|------------------------------------------|
+| 3rd           | *ensnaring strike*, *speak with animals* |
+| 5th           | *moonbeam*, *misty step*                |
+| 9th           | *plant growth*, *protection from energy* |
+| 13th          | *ice storm*, *stoneskin*                |
+| 17th          | *commune with nature*, *tree stride*    |
+
+#### Channel Divinity
+When you take this oath at 3rd level, you gain the following two Channel Divinity options.
+
+- **Nature’s Wrath.** You can use your Channel Divinity to invoke primal forces to ensnare a foe. As an action, you cause spectral vines to spring up and reach for a creature within 10 feet of you that you can see. The creature must succeed on a Strength or Dexterity saving throw (its choice) or be restrained. While restrained by the vines, the creature can repeat the saving throw at the end of each of its turns, freeing itself on a success. The vines then vanish.
+
+- **Turn the Faithless.** You can use your Channel Divinity to utter ancient words that pain fey and fiends. As an action, you present your holy symbol and each fey or fiend within 30 feet of you that can hear you must make a Wisdom saving throw. On a failed save, the creature is turned for 1 minute or until it takes damage.  
+  A turned creature must spend its turns trying to move as far away from you as it can, and it can’t willingly move to a space within 30 feet of you. It also can’t take reactions. For its action, it can use only the Dash action or try to escape from an effect that prevents it from moving. If there’s nowhere to move, the creature can take the Dodge action.  
+  If the creature’s true form is concealed by an illusion, shapeshifting, or other effect, that form is revealed while it is turned.
+
+#### Aura of Warding
+Starting at 7th level, ancient magic lies so heavily upon you that it forms an aura. You and friendly creatures within 10 feet of you have resistance to damage from spells.  
+At 18th level, the range of this aura increases to 30 feet.
+
+#### Undying Sentinel
+Starting at 15th level, when you are reduced to 0 hit points and not killed outright, you can choose to drop to 1 hit point instead. Once you use this ability, you can’t use it again until you finish a long rest.  
+Additionally, you suffer none of the drawbacks of old age, and you can’t be aged magically.
+
+#### Elder Champion
+At 20th level, you can assume the form of an ancient force of nature, taking on an appearance you choose. For example, your skin might turn green or take on the texture of bark, your hair might become leafy or moss-like, or you might sprout antlers or a mane like a lion.  
+Using your action, you undergo a transformation. For 1 minute, you gain the following benefits:  
+- At the start of each of your turns, you regain 10 hit points.  
+- Whenever you cast a paladin spell that has a casting time of 1 action, you can cast it using a bonus action instead.  
+- Enemy creatures within 10 feet of you have disadvantage on saving throws against your paladin spells and Channel Divinity options.  
+
+Once you use this feature, you can’t use it again until you finish a long rest.
+
+### Oath of Vengeance
+
+#### Tenets of Vengeance
+The tenets of the Oath of Vengeance vary by paladin, but all the tenets revolve around punishing wrongdoers by any means necessary. Paladins who uphold these tenets are willing to sacrifice even their own righteousness to mete out justice. They are often neutral or lawful neutral in alignment. The core principles of the tenets are brutally simple.  
+
+- **Fight the Greater Evil.** Faced with a choice of fighting my sworn foes or combating a lesser evil, I choose the greater evil.  
+- **No Mercy for the Wicked.** Ordinary foes might win my mercy, but my sworn enemies do not.  
+- **By Any Means Necessary.** My qualms can’t get in the way of exterminating my foes.  
+- **Restitution.** If my foes wreak ruin on the world, it is because I failed to stop them. I must help those harmed by their misdeeds.
+
+#### Oath Spells
+You gain the following oath spells at the specified paladin levels.
+
+| Paladin Level | Spells                                   |
+|---------------|------------------------------------------|
+| 3rd           | *bane*, *hunter’s mark*                 |
+| 5th           | *hold person*, *misty step*             |
+| 9th           | *haste*, *protection from energy*       |
+| 13th          | *banishment*, *dimension door*          |
+| 17th          | *hold monster*, *scrying*               |
+
+#### Channel Divinity
+When you take this oath at 3rd level, you gain the following two Channel Divinity options.
+
+- **Abjure Enemy.** As an action, you present your holy symbol and speak a prayer of denunciation, using your Channel Divinity. Choose one creature within 60 feet of you that you can see. That creature must make a Wisdom saving throw, unless it is immune to being frightened. Fiends and undead have disadvantage on this saving throw.  
+  On a failed save, the creature is frightened for 1 minute or until it takes damage. While frightened, the creature’s speed is 0, and it can’t benefit from any bonus to its speed.  
+  On a successful save, the creature’s speed is halved for 1 minute or until it takes damage.
+
+- **Vow of Enmity.** As a bonus action, you can utter a vow of enmity against a creature you can see within 10 feet of you, using your Channel Divinity. You gain advantage on attack rolls against the creature for 1 minute or until it drops to 0 hit points or falls unconscious.
+
+#### Relentless Avenger
+Starting at 7th level, your supernatural focus helps you close off a foe’s retreat. When you hit a creature with an opportunity attack, you can move up to half your speed immediately after the attack and as part of the same reaction. This movement doesn’t provoke opportunity attacks.
+
+#### Soul of Vengeance
+Starting at 15th level, the authority with which you speak your Vow of Enmity gives you greater power over your foe. When a creature under the effect of your Vow of Enmity makes an attack, you can use your reaction to make a melee weapon attack against that creature if it is within range.
+
+#### Avenging Angel
+At 20th level, you can assume the form of an avenging angel. Using your action, you undergo a transformation. For 1 hour, you gain the following benefits:  
+- Wings sprout from your back and grant you a flying speed of 60 feet.  
+- You emanate an aura of menace in a 30-foot radius. The first time any enemy creature enters the aura or starts its turn there during a battle, the creature must succeed on a Wisdom saving throw or become frightened of you for 1 minute or until it takes any damage. Attack rolls against the frightened creature have advantage.  
+
+Once you use this feature, you can’t use it again until you finish a long rest.

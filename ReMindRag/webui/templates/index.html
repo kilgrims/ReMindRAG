@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReMindRAG Web UI</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2980b9;
+            --accent-color: #e74c3c;
+            --light-bg: #f5f7fa;
+            --dark-bg: #34495e;
+            --text-color: #2c3e50;
+            --light-text: #ecf0f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--dark-bg);
+            color: var(--light-text);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            max-width: 2000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .two-column-layout {
+            display: grid;
+            grid-template-columns: 1fr 2.5fr;
+            gap: 2rem;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .collection-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .collection-name {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c0392b;
+        }
+        
+        .btn-green {
+            background-color: #27ae60;
+        }
+        
+        .btn-green:hover {
+            background-color: #2ecc71;
+        }
+        
+        .nav-links {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .right-column {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .input-group {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .input-field {
+            flex: 1;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+        
+        .visualization-area {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem;
+            margin-top: 1rem;
+            height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        #graph-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #graph-container svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        #graph-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 4px;
+        }
+        
+        .status-message {
+            margin-top: 1rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .status-message.success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .status-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ReMindRAG Web UI</h1>
+    </header>
+    
+    <div class="container">
+        <div class="two-column-layout">
+            <!-- Left Column -->
+            <div class="left-column">
+                <div class="card">
+                    <h2>Database Collections</h2>
+                    <p>Select a collection to view or search its contents:</p>
+                    
+                    <div class="collections-grid">
+                        {% for collection_name in collections %}
+                        <div class="collection-card">
+                            <h3 class="collection-name">{{ collection_name }}</h3>
+                            <div class="card-actions">
+                                <a href="{{ url_for('view_collection', collection_name=collection_name) }}" class="btn">View All</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="nav-links">
+                        <a href="{{ url_for('search_page') }}" class="btn btn-secondary">Advanced Search</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column -->
+            <div class="right-column">
+                <div class="card">
+                    <h2>Control Panel</h2>
+                    <div class="input-group">
+                        <input type="text" class="input-field" placeholder="Enter query or parameters..." id="query-input">
+                        <button class="btn" id="submit-btn">Submit</button>
+                    </div>
+
+                </div>
+                
+                <!-- Visualization Area -->
+                <div class="visualization-area">
+                    <div id="graph-container">
+                        <div id="status-message" class="status-message" style="display: none;"></div>
+                        <svg id="visualization-graph" width="100%" height="100%" viewBox="0 0 800 800">
+                            <defs>
+                                <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                    <polygon points="0 0, 10 3.5, 0 7" fill="#2c3e50" />
+                                </marker>
+                            </defs>
+                            
+                            <circle cx="150" cy="100" r="40" fill="#3498db" opacity="0.8" />
+                            <circle cx="350" cy="150" r="30" fill="#e74c3c" opacity="0.8" />
+                            <circle cx="500" cy="200" r="35" fill="#2ecc71" opacity="0.8" />
+                            <circle cx="650" cy="100" r="25" fill="#f39c12" opacity="0.8" />
+                            <circle cx="250" cy="300" r="20" fill="#9b59b6" opacity="0.8" />
+                            
+                            <line x1="150" y1="100" x2="350" y2="150" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)" />
+                            <line x1="350" y1="150" x2="500" y2="200" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)" />
+                            <line x1="500" y1="200" x2="650" y2="100" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)" />
+                            <line x1="350" y1="150" x2="250" y2="300" stroke="#34495e" stroke-width="2" marker-end="url(#arrowhead)" />
+                            
+                            <text x="150" y="100" text-anchor="middle" fill="white" font-size="12px" font-weight="bold">Node 1</text>
+                            <text x="350" y="150" text-anchor="middle" fill="white" font-size="12px" font-weight="bold">Node 2</text>
+                            <text x="500" y="200" text-anchor="middle" fill="white" font-size="12px" font-weight="bold">Node 3</text>
+                            <text x="650" y="100" text-anchor="middle" fill="white" font-size="12px" font-weight="bold">Node 4</text>
+                            <text x="250" y="300" text-anchor="middle" fill="white" font-size="12px" font-weight="bold">Node 5</text>
+                        </svg>
+                        
+                        <!-- Status message area (hidden by default) -->
+                        <div id="status-message" class="status-message" style="display: none;"></div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const submitBtn = document.getElementById('submit-btn');
+            const visualizeBtn = document.getElementById('visualize-btn');
+            const queryInput = document.getElementById('query-input');
+            const graphContainer = document.getElementById('graph-container');
+            const statusMessage = document.getElementById('status-message');
+            const defaultVisualization = document.getElementById('visualization-graph');
+            
+            submitBtn.addEventListener('click', function() {
+                const query = queryInput.value.trim();
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Processing...';
+                statusMessage.style.display = 'none';
+                
+                fetch('/process_query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.file_url) {
+                        // Hide the default visualization
+                        defaultVisualization.style.display = 'none';
+                        
+                        // Create or update the iframe to show the result
+                        let iframe = graphContainer.querySelector('#graph-iframe');
+                        if (!iframe) {
+                            iframe = document.createElement('iframe');
+                            iframe.id = 'graph-iframe';
+                            graphContainer.insertBefore(iframe, statusMessage);
+                        }
+                        
+                        iframe.src = data.file_url;
+                        iframe.style.display = 'block';
+                        
+                        // Show success message
+                        statusMessage.textContent = `Successfully loaded visualization from: ${data.file_url}`;
+                        statusMessage.className = 'status-message success';
+                        statusMessage.style.display = 'block';
+                    } else {
+                        throw new Error('No file URL returned from server');
+                    }
+                })
+                .catch(error => {
+                    // Restore default visualization
+                    defaultVisualization.style.display = 'block';
+                    
+                    // Remove any existing iframe
+                    const iframe = graphContainer.querySelector('#graph-iframe');
+                    if (iframe) {
+                        iframe.style.display = 'none';
+                    }
+                    
+                    // Show error message
+                    statusMessage.textContent = `Error: ${error.message}`;
+                    statusMessage.className = 'status-message error';
+                    statusMessage.style.display = 'block';
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit';
+                });
+            });
+            
+            visualizeBtn.addEventListener('click', function() {
+                // This could be enhanced to generate visualizations based on the query results
+                alert('Visualization generation would be implemented here');
+            });
+        });
+    </script>
+</body>
+</html>
