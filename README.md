@@ -27,10 +27,11 @@ Use this command to initialize this Repo's environment.
 Replace with your OpenAI API key by filling in the `api_key.json` file:
 
 ```json
-{
-    "base_url": "your_api_key_url",
-    "api_key": "your_api_key"
-}
+[
+    {
+        "base_url": "your_api_key_url",
+        "api_key": "your_api_key"
+]
 ```
 
 Download the HuggingFace model [nomic-ai/nomic-embed-text-v2-moe](https://huggingface.co/nomic-ai/nomic-embed-text-v2-moe) and place it in the `./model_cache` directory.
@@ -132,7 +133,15 @@ If you want to implement a different chunking strategy, please subclass the **Ch
 
 **Step 1**: Download the LooGLE dataset and our modified dataset, then place them in `eval/database`.
 
-**Step 2**: Run the following commands to test ReMindRAG.
+**Step 2**: Download the HuggingFace model [nomic-ai/nomic-embed-text-v2-moe](https://huggingface.co/nomic-ai/nomic-embed-text-v2-moe) and place it in the `./model_cache` directory.
+
+**Step 3**: Load your HuggingFace token:
+
+```shell
+$env:HF_TOKEN = "hf_YourTokenHere"
+```
+
+**Step 4**: Run the following commands to test ReMindRAG.
 
 ```shell
 cd eval
