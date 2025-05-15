@@ -31,6 +31,7 @@ Replace with your OpenAI API key by filling in the `api_key.json` file:
     {
         "base_url": "your_api_key_url",
         "api_key": "your_api_key"
+    }
 ]
 ```
 

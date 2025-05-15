@@ -19,3 +19,5 @@ eval/dataset_cache/*
 
 eval/database/*
 !eval/database/.gitkeep
+
+eval/data_modify/
