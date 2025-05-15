@@ -1,4 +1,4 @@
-<center><h1>ReMindRAG: Low-Cost LLM-Guided Knowledge Graph Traversal</h1></center>
+<center><h1>ReMindRAG: Low-Cost LLM-Guided Knowledge Graph Traversal for Efficient RAG</h1></center>
 
 
 <div style="text-align:center">
