@@ -27,7 +27,7 @@ class PreProcessing():
                 json.dump({}, f, indent=4)
             self.logger.info(f"Created New Cache : {f'{self.save_dir}/split_question_cache.json'}")
 
-    def query_main(self, system_prompt, chat_history, user_input, search_key_nums, max_jumps, force_do_rag, do_update ):
+    def query_main(self, system_prompt, chat_history, user_input, search_key_nums, max_jumps, max_split_question_num, force_do_rag, do_update):
         self.logger.info("---------------------------------------------------------------------------------------------------------")
         self.logger.info("Start Query Process...")
 
@@ -44,7 +44,7 @@ class PreProcessing():
         response = ""
         if need_rag:
             chat_history_str = self.change_chat_history_to_str(chat_history)
-            rewritten_querys = self.get_spilt_question(chat_history_str, user_input)
+            rewritten_querys = self.get_spilt_question(chat_history_str, user_input, max_split_question_num)
 
             rewritten_query_and_ans = {}
             final_chunk_summary = []
@@ -97,7 +97,7 @@ class PreProcessing():
         self.logger.debug(f"Function: splite_question Output:\n{response}")
         return response
     
-    def get_spilt_question(self, chat_history_str, user_input, max_split_question_num = 1):
+    def get_spilt_question(self, chat_history_str, user_input, max_split_question_num):
         if max_split_question_num == 1:
             self.logger.info(f"Origin Query: {user_input}")
             # self.logger.info(f"Splited Question: {user_input}")

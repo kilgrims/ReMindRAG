@@ -26,7 +26,7 @@ class ReMindRag:
                 chunk_summary_threshold = 350,
                 synonym_threshold = 0.7, 
                 edge_weight_coefficient = 0.1, 
-                strong_connection_threshold = 0.6,
+                strong_connection_threshold = 0.55,
                 
                 save_dir:str = './Rag_Cache', 
                 log_path = None
@@ -34,10 +34,10 @@ class ReMindRag:
 
         logging.addLevelName(5, "TRACE")
         logging.Logger.trace = trace
-        self.logger = setup_logger("DynamicRag", logger_level, log_path)
+        self.logger = setup_logger("ReMindRag", logger_level, log_path)
 
         print(f"Logger Level: {self.logger.getEffectiveLevel()}.")
-        self.logger.info("Start Initail DynamicRag.")
+        self.logger.info("Start Initail ReMindRag.")
 
         self.save_dir = save_dir
         self.database_pth  = save_dir + "/chroma_data"
@@ -80,7 +80,7 @@ class ReMindRag:
             log_path=log_path
         )
 
-        self.logger.info("Initialize DynamicRag Successfully.")
+        self.logger.info("Initialize ReMindRag Successfully.")
         
 
     def set_database_description(self,database_description):
@@ -116,7 +116,8 @@ class ReMindRag:
             system_prompt:str = None,
             search_key_nums = 2,
             max_jumps = 10,
-            force_do_rag=False, 
+            max_split_question_num = 1,
+            force_do_rag:boo = False, 
             do_update:bool = True):
         
         if not system_prompt:
@@ -131,6 +132,7 @@ class ReMindRag:
             user_input=user_input, 
             search_key_nums=search_key_nums,
             max_jumps=max_jumps,
+            max_split_question_num=max_split_question_num,
             force_do_rag=force_do_rag,
             do_update=do_update)
         return response, chunks, edges

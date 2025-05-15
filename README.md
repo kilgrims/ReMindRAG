@@ -55,16 +55,31 @@ In the `example` folder, we provide a demo. Use the following command to run thi
 
 ## Parameter Configuration
 <details>
-<summary>Parameters</summary>
+<summary>Initialization Parameters</summary>
 
-| Parameter                      | Default Value       | Description |
-|--------------------------------|------------------|-------------|
-| **Node Correlation Weight** | 0.1              | Adjusts system's reliance on edge embedding for strong links (range 0.1-0.2) |
-| **Strong Connection Threshold** | 0.55           | Below 0.775 theoretically; practical range 0.5-0.75 balances retrieval cost and memory capacity |
-| **Synonym Similarity Threshold** | 0.7             | Merges entities when embedding similarity exceeds this value |
-| **Maximum Hop Count**          | 10               | Controls nodes expanded during subgraph queries |
-| **Question Decomposition Limit** | 1               | Maximum sub-questions from semantic decomposition |
-| **Initial Seed Node Count**    | 2                | Number of seed nodes in query initialization |
+| Parameter                      | Type | Default     | Description |
+|--------------------------------|--------|------------------|-------------|
+| `edge_weight_coefficient` | Float | 0.1              | Adjusts system's reliance on edge embedding for strong links (range 0.1-0.2) |
+| `strong_connection_threshold` | Float | 0.55           | Below 0.775 theoretically; practical range 0.5-0.75 balances retrieval cost and memory capacity |
+| `synonym_threshold` | Float | 0.7             | Merges entities when embedding similarity exceeds this value |
+| `database_description` | Str | None           | A brief one-sentence description of your data |  
+| `save_dir` | Str | None           | Your data storage path |  
+| `logger_level` | Int | None           | Logger level based on logging (Level 5 is "Trace," the lowest level we set) |  
+| `log_path` | Str | None           | Your log storage path |
+
+</details>
+
+<details>
+<summary>Query Parameters</summary>
+
+| Parameter                      | Type | Default    | Description |
+|--------------------------------|--------|------------------|-------------|
+| `max_jumps`          | Int | 10               | Controls nodes expanded during subgraph queries |
+| `max_split_question_num` | Int | 1               | Maximum sub-questions from semantic decomposition (Set 1 to skip question split) |
+| `search_key_nums`    | Int | 2                | Number of seed nodes in query initialization |
+| `system_prompt`    | Str | None              | System prompt (if not set, our default system prompt will be used) |  
+| `force_do_rag`    | Bool | False                | If set to False, the system will automatically decide whether to perform the RAG process |  
+| `do_update`    | Bool | True                | If set to False, the memory function will be disabled for this query |
 
 </details>
 
