@@ -27,8 +27,6 @@ If there's no entity found, please output "[]" only.
 """
 
 relation_extract_prompt = """
-Here's a simple and easy-to-understand English translation of your instructions:
-
 For the chunk of text I'm about to input, it contains the following named entities: {entity_list}.
 Please extract the relationships between these named entities. Each relationship should be a predicate phrase describing the connection between the subject and the object.
 For example, in "Tom" "raises" "dog", "raises" is the relationship. After extracting a relationship, combine it with the subject and object to form a complete sentence.
