@@ -117,7 +117,7 @@ class ReMindRag:
             search_key_nums = 2,
             max_jumps = 10,
             max_split_question_num = 1,
-            force_do_rag:boo = False, 
+            force_do_rag:bool = False, 
             do_update:bool = True):
         
         if not system_prompt:
