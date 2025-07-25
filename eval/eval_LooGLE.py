@@ -143,7 +143,7 @@ Original answer = {generated_answer}
     for data_iter, cleaned_data_iter, rewrite_data_iter in zip(filtered_data, cleaned_data, rewrite_data):
         print(f"{title_index} Handle question {total_num+1}")
         if(question_type=="origin"):
-            query = cleaned_data["question"]  
+            query = cleaned_data_iter["question"]  
         else:
             query = rewrite_data_iter["question"]
 
